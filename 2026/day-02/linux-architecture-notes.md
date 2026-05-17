@@ -34,3 +34,9 @@ Eg:
 
 - grep
 → Searches text inside files
+
+# Systemmd commands
+- systemctl start nginx
+- systemctl stop nginx
+- systemctl restart nginx
+- systemctl reload nginx
