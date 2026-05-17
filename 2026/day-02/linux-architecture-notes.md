@@ -6,7 +6,7 @@
 - System Libraries → Help apps talk to kernel
 - Utilities & Applications → Commands and tools (ls, grep, etc.)
 
-# Processes in Linux (with example)
+# Processes in Linux
 A process is a running instance of a program
 Eg:
 - Running firefox → creates a process
