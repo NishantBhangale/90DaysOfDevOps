@@ -14,7 +14,7 @@ I am currently working as a Test Engineer with over 6 years of experience in sof
 # Goals for the next 90 days
 My immediate goal is to secure a DevOps role and successfully transition into this field. In the long term, I want to grow as a DevOps engineer and actively contribute to the DevOps community by sharing knowledge and best practices.
 
-# 3 core DevOps skills you want to build
+# 3 core DevOps skills that I want to build
 Kubernetes: Deployment, troubleshooting, and cluster management
 Docker: Writing optimized Dockerfiles and container management
 CI/CD Pipelines: Building pipelines using tools like Jenkins / GitHub Actions / GitLab CI
