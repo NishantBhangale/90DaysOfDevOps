@@ -8,7 +8,7 @@
 
 # Processes in Linux (with example)
 A process is a running instance of a program
-Example:
+Eg:
 - Running firefox → creates a process
 - Running nginx server → background process
 
