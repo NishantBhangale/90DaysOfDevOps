@@ -1,6 +1,6 @@
 ## process commands
 
-    * ps -ef | head -n 20 - List running processes (top 20 lines)
+    - ps -ef | head -n 20 - List running processes (top 20 lines)
  <img width="880" height="470" alt="image" src="https://github.com/user-attachments/assets/909edf2b-76d3-4ae3-aa5a-4a1ffc170e2e" />
 
     * pgrep -lx dockerd - List PID exact match to dockerd
