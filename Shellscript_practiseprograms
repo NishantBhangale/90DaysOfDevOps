@@ -1,0 +1,353 @@
+1. Variables & Input (1–25)
+Print Hello World
+Print username
+Print hostname
+Print current date
+Print current directory
+Accept name and print it
+Accept age and print it
+Add two numbers
+Subtract two numbers
+Multiply two numbers
+Divide two numbers
+Swap two variables
+Calculate square
+Calculate cube
+Celsius to Fahrenheit
+Fahrenheit to Celsius
+Find remainder
+Print environment variables
+Print HOME path
+Print PATH variable
+Print script name
+Print first argument
+Print all arguments
+Count arguments
+Validate argument count
+
+2. Conditions (26–75)
+Even/Odd
+Positive/Negative
+Largest of two numbers
+Largest of three numbers
+Smallest of three numbers
+Check voting eligibility
+Check marriage eligibility
+Pass/Fail
+Grade calculator
+Leap year
+Divisible by 5
+Divisible by 7
+Divisible by both
+Check file exists
+Check directory exists
+Check executable file
+Check writable file
+Check readable file
+Check symbolic link
+Check empty string
+Check non-empty string
+Check user exists
+Check group exists
+Check process running
+Check port open
+Check internet connectivity
+Check AWS CLI installed
+Check Docker installed
+Check Jenkins installed
+Check Git installed
+Compare two strings
+Compare two numbers
+Compare file sizes
+Check root user
+Check sudo privileges
+Check disk usage > 80%
+Check memory usage > 80%
+Check CPU usage > 80%
+Check service running
+Check package installed
+Check shell type
+Check login shell
+Check hostname
+Check OS type
+Check architecture
+Check active user
+Check current month
+Check current day
+Check weekend
+Check business day
+
+3. Loops (76–125)
+Print 1–10
+Print 1–100
+Print even numbers
+Print odd numbers
+Sum 1–100
+Multiplication table
+Factorial
+Fibonacci
+Reverse number
+Count digits
+Palindrome number
+Armstrong number
+Prime number
+Prime numbers range
+GCD
+LCM
+Pattern star triangle
+Inverted triangle
+Pyramid
+Hollow square
+Diamond pattern
+Print alphabets
+Print A-Z
+Print a-z
+Countdown timer
+Print file contents line by line
+Count files in directory
+Count directories
+Count hidden files
+Rename files
+Create 100 files
+Delete files by pattern
+Compress multiple files
+Backup files
+Rotate backups
+Monitor service every 5 sec
+Ping multiple hosts
+SSH multiple servers
+Deploy to multiple servers
+Restart multiple services
+Read CSV
+Read log file
+Extract IPs
+Extract usernames
+Extract URLs
+Read array values
+Loop through array
+Nested loops
+Infinite loop
+Menu driven program
+
+4. Functions (126–175)
+Hello function
+Add function
+Subtract function
+Multiply function
+Divide function
+Function with arguments
+Function returning value
+Function returning status
+Recursive factorial
+Recursive Fibonacci
+User validation
+Password validation
+Check service
+Check disk
+Check memory
+Create user
+Delete user
+Lock user
+Unlock user
+Backup function
+Restore function
+Log function
+Error function
+Success function
+Email function
+Retry function
+Wait function
+Cleanup function
+Health check function
+AWS validation function
+Docker validation function
+Git validation function
+Kubernetes validation function
+Port validation function
+IP validation function
+URL validation function
+JSON validation function
+CSV validation function
+Config validation function
+SSH validation function
+Process validation function
+Service validation function
+Archive function
+Extract function
+Deploy function
+Rollback function
+Notification function
+Install package function
+Remove package function
+Update package function
+
+5. Arrays (176–210)
+Create array
+Print array
+Array length
+Add element
+Remove element
+Search element
+Sort array
+Reverse array
+Merge arrays
+Unique values
+Duplicate values
+Highest number
+Lowest number
+Sum array
+Average array
+Product array
+Iterate array
+Array from file
+Array from command
+Array of servers
+Array of IPs
+Array of users
+Array of ports
+Array of services
+Array of packages
+201–210. Variations of above
+
+6. File Handling (211–260)
+Create file
+Delete file
+Copy file
+Move file
+Rename file
+Append text
+Clear file
+Read file
+Count lines
+Count words
+Count characters
+Search word
+Replace word
+Replace line
+Remove duplicate lines
+Sort file
+Merge files
+Compare files
+Find largest file
+Find smallest file
+Find recent file
+Find old file
+Find empty files
+Find large files
+Compress file
+Uncompress file
+Tar file
+Untar file
+Zip file
+Unzip file
+Backup directory
+Restore backup
+Rotate backups
+Archive logs
+Delete old logs
+246–260. Variations
+
+7. DevOps Interview Scripts (261–340)
+Create EC2
+Stop EC2
+Start EC2
+Terminate EC2
+Create S3 bucket
+Upload S3 object
+Download S3 object
+Create IAM user
+Create Key Pair
+Create Security Group
+Docker image build
+Docker container run
+Remove container
+Remove image
+Docker cleanup
+Jenkins health check
+Git clone repo
+Git pull repo
+Git branch creation
+Git merge branch
+Git tag creation
+Kubernetes pod status
+Kubernetes deployment status
+Restart deployment
+Scale deployment
+Port check
+Health check URL
+SSL certificate expiry
+Nginx status
+Apache status
+Service monitor
+CPU monitor
+Memory monitor
+Disk monitor
+Log monitor
+Process monitor
+User monitor
+Login monitor
+Failed login monitor
+System inventory
+301–340. More AWS/Docker/K8s monitoring scripts
+
+8. Frequently Asked Interview Questions (341–400)
+Reverse string
+Palindrome string
+Count vowels
+Count words
+Count characters
+Find duplicate words
+Find longest word
+Find shortest word
+Remove spaces
+Replace spaces
+Convert lowercase to uppercase
+Convert uppercase to lowercase
+Sort words
+Unique words
+Word frequency
+Log parser
+Extract IPs
+Extract errors
+Extract warnings
+Extract timestamps
+Top 10 IPs
+Top 10 users
+Top 10 errors
+Parse CSV
+Parse JSON
+Parse XML
+Parse YAML
+Cron validation
+Service restart script
+Retry mechanism
+Lock file mechanism
+Process singleton script
+Health check script
+Rollback script
+Backup rotation script
+Deployment script
+Blue-green deployment simulation
+Canary deployment simulation
+Log rotation script
+Disk cleanup script
+Auto archive logs
+SSH automation
+SCP automation
+Rsync automation
+Package installation automation
+Server hardening checks
+User audit
+Permission audit
+Security audit
+Config validation
+Environment validation
+Dependency validation
+Docker health script
+Kubernetes health script
+AWS inventory script
+S3 cleanup script
+EC2 inventory script
+IAM audit script
+End-to-end deployment script
+Complete DevOps project automation
