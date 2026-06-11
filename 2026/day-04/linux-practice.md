@@ -22,7 +22,7 @@
       tail -n 40 /var/log/auth.log -Last 40 lines of auth.log 
  <img width="1390" height="715" alt="image" src="https://github.com/user-attachments/assets/9a7d662b-cb99-4aac-9133-863fb5fc3677" />
 
-## Service of inspection(nginx)
+## Service for inspection(nginx)
 
       systemctl status nginx - check status of nginx service
  <img width="1390" height="488" alt="image" src="https://github.com/user-attachments/assets/d9293407-f43d-47a9-ad0b-1cf6fd262eca" />
