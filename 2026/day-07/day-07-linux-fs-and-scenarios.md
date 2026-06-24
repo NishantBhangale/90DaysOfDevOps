@@ -114,7 +114,7 @@ Step 1 : `ls -l backup.sh`
 
 Why : Check current permissions of file. Look for: -rw-r--r-- (notice no 'x' = not executable).
 
-Step 2 : `chmod +x dbackup.sh`
+Step 2 : `chmod +x backup.sh`
 
 Why : Add execute permission to file.
 
