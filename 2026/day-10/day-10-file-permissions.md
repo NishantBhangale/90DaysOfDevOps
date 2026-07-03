@@ -67,8 +67,7 @@
 * Writing to a read-only file - what happens?
 
 Answer : Writing to a read‑only file normally gives Permission denied. 
-With sudo, you can override and write to the file — but only if the redirection itself is executed with root privileges (using tee or sudo bash -c).
-Even sudo won’t help if the file is set to immutable (via chattr +i) or mounted on a read‑only filesystem.
+With sudo, you can override and write to the file — but only if the redirection itself is executed with root privileges
     
 <img width="868" height="103" alt="image" src="https://github.com/user-attachments/assets/7ea01e1a-7788-4e51-ac18-a068043bd604" />
 
