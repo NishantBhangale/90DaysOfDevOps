@@ -5,6 +5,7 @@ Accept name and print it, Accept age and print it
 Add, subtract, multiply, divide two numbers
 Print first argument, Print all arguments, Count arguments, Validate argument count
 Print environment variables, HOME path, PATH variable
+
 Conditions (core logic)
 Even/Odd, Positive/Negative
 Largest of three numbers
@@ -14,6 +15,7 @@ Check empty string / non-empty string
 Check root user, Check sudo privileges
 Check disk usage >80%, Check memory usage >80%
 Compare two strings, Compare two numbers
+
 Loops (practical only)
 Print 1–10, Sum 1–100
 Multiplication table
@@ -46,6 +48,7 @@ Find largest file, Find recent file, Find empty files
 Backup directory, Rotate backups, Archive logs, Delete old logs
 
 Phase 3 — DevOps Real Scripts (Build these for GitHub)
+
 These are your actual portfolio scripts
 From section 7:
 Docker image build script
