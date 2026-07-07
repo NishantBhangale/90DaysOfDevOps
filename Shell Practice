@@ -1,0 +1,76 @@
+Phase 1 — Foundations (Do these first, in order)
+Variables & Input
+Print username, hostname, current date, current directory
+Accept name and print it, Accept age and print it
+Add, subtract, multiply, divide two numbers
+Print first argument, Print all arguments, Count arguments, Validate argument count
+Print environment variables, HOME path, PATH variable
+Conditions (core logic)
+Even/Odd, Positive/Negative
+Largest of three numbers
+Check voting eligibility (you already did this ✓)
+Check file exists, Check directory exists
+Check empty string / non-empty string
+Check root user, Check sudo privileges
+Check disk usage >80%, Check memory usage >80%
+Compare two strings, Compare two numbers
+Loops (practical only)
+Print 1–10, Sum 1–100
+Multiplication table
+Factorial, Fibonacci
+Countdown timer
+Print file contents line by line
+Count files in directory
+Read log file
+Loop through array
+Menu driven program
+
+Phase 2 — Functions & Real Logic
+Functions (these directly appear in interviews)
+Hello function, Add/Subtract/Multiply/Divide with arguments
+Function returning value, Function returning status
+Check service, Check disk, Check memory
+Create user, Delete user
+Log function, Error function, Success function
+Health check function
+Retry function
+Deploy function, Rollback function
+Docker validation function
+Kubernetes validation function
+File Handling (practical ones only)
+Create, delete, copy, move, rename file
+Append text, Read file
+Count lines, Count words
+Search word, Replace word
+Find largest file, Find recent file, Find empty files
+Backup directory, Rotate backups, Archive logs, Delete old logs
+
+Phase 3 — DevOps Real Scripts (Build these for GitHub)
+These are your actual portfolio scripts
+From section 7:
+Docker image build script
+Docker container run script
+Docker cleanup script
+Jenkins health check
+Git clone repo, Git pull repo, Git branch creation
+Kubernetes pod status
+Kubernetes deployment status
+Restart deployment, Scale deployment
+Port check
+Health check URL
+SSL certificate expiry check
+CPU monitor, Memory monitor, Disk monitor
+Log monitor, Process monitor
+System inventory script
+From section 8:
+Log parser (extract IPs, errors, timestamps)
+Top 10 errors from logs
+Health check script
+Rollback script
+Backup rotation script
+Deployment script
+Disk cleanup script
+SSH automation
+Docker health script
+Kubernetes health script
+End-to-end deployment script
