@@ -48,7 +48,6 @@ Find largest file, Find recent file, Find empty files
 Backup directory, Rotate backups, Archive logs, Delete old logs
 
 Phase 3 — DevOps Real Scripts (Build these for GitHub)
-
 These are your actual portfolio scripts
 From section 7:
 Docker image build script
