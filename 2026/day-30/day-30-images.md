@@ -102,4 +102,5 @@ Check `docker ps -a` after each step — observe the state changes.
    <img width="875" height="106" alt="image" src="https://github.com/user-attachments/assets/549ae771-a918-484f-9e71-877ef8c3ec71" />
 
 7. Check how much disk space Docker is using
+   
    <img width="597" height="133" alt="image" src="https://github.com/user-attachments/assets/805d6fa5-9150-4b4f-8327-283827b89660" />
