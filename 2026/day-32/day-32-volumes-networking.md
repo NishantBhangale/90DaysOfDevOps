@@ -109,9 +109,17 @@ Write in your notes: What is the difference between a named volume and a bind mo
 
 ### Task 5: Custom Networks
 1. Create a custom bridge network called `my-app-net`
+   <img width="1208" height="117" alt="image" src="https://github.com/user-attachments/assets/a0152d77-599d-45c2-b34d-0cd3f827b437" />
 2. Run two containers on `my-app-net`
-3. Can they ping each other by **name** now?
-4. Write in your notes: Why does custom networking allow name-based communication but the default bridge doesn't?
+   <img width="1208" height="363" alt="image" src="https://github.com/user-attachments/assets/809d3e70-6c54-4955-b69a-eb1afd35363b" />
+
+4. Can they ping each other by **name** now?
+   <img width="1248" height="846" alt="image" src="https://github.com/user-attachments/assets/f2b0567a-668d-473a-9c0e-4251e444578a" />
+
+6. Write in your notes: Why does custom networking allow name-based communication but the default bridge doesn't?
+   
+    `A user-defined (custom) bridge network has Docker’s built-in DNS service. It automatically resolves a container name to its current IP address.
+     The default bridge network does not provide this automatic container-name DNS resolution, so you generally use the container IP.`
 
 ---
 
@@ -119,7 +127,10 @@ Write in your notes: What is the difference between a named volume and a bind mo
 1. Create a custom network
 2. Run a **database container** (MySQL/Postgres) on that network with a volume for data
 3. Run an **app container** (use any image) on the same network
-4. Verify the app container can reach the database by container name
+   <img width="1248" height="827" alt="image" src="https://github.com/user-attachments/assets/29287c34-bd66-46c7-99e5-12c6c1c621a3" />
+
+5. Verify the app container can reach the database by container name
+   <img width="1865" height="802" alt="image" src="https://github.com/user-attachments/assets/b366878b-a730-4549-bb80-475e291fc1a7" />
 
 ---
 
