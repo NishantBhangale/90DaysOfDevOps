@@ -21,8 +21,8 @@ Containers are ephemeral — they lose data when removed. And by default, contai
 
 <img width="789" height="943" alt="image" src="https://github.com/user-attachments/assets/5dc889d6-ac05-4271-862a-2f7cb71ccb07" />
 
-4. Stop and remove the container
-5. Run a new one — is your data still there?
+3. Stop and remove the container
+4. Run a new one — is your data still there?
    No, we created a database called temp earlier. After removing the old container and starting a new container, the data we created earlier was not preserved.
    Reason : This happened because we didn't create and bind a persistent volume when running the container.
    
@@ -30,6 +30,9 @@ Containers are ephemeral — they lose data when removed. And by default, contai
 
 
 Write what happened and why.
+* Created mysql container, and added database in it, then deleted.
+* Created another container with same environment variables, but the data was gone.
+* Why - Because containers are ephemeral they lose data when removed.
 
 ---
 
@@ -38,22 +41,22 @@ Write what happened and why.
    
    <img width="789" height="608" alt="image" src="https://github.com/user-attachments/assets/9395c7f1-f572-4dad-928e-f97f9c81bca6" />
 
-3. Run the same database container, but this time **attach the volume** to it
+2. Run the same database container, but this time **attach the volume** to it
 
    <img width="1436" height="121" alt="image" src="https://github.com/user-attachments/assets/4ee036e6-e750-4e54-b643-14e19186f9cd" />
    
-5. Add some data, stop and remove the container
+3. Add some data, stop and remove the container
    
    <img width="1436" height="867" alt="image" src="https://github.com/user-attachments/assets/439ba08c-16be-404a-8fc2-8ea3085fb91b" />
 
    <img width="1436" height="170" alt="image" src="https://github.com/user-attachments/assets/df23eb81-adb0-4063-8a4d-145b43c5ada6" />
 
 
-7. Run a brand new container with the **same volume**
+4. Run a brand new container with the **same volume**
 
   <img width="1436" height="556" alt="image" src="https://github.com/user-attachments/assets/10a09dc3-0f73-43a3-ab60-8e4bf634a7a7" />
    
-9. Is the data still there?
+5. Is the data still there?
     ` Yes, this time we attached a persistent volume while running the container. In the earlier container, we created the emp_db database.
       After stopping and removing that container and starting a new one with the volume mapped, we were still able to access our emp_db database.
       This means the data was stored in the persistent volume and was available again when we mounted the volume to the new container.`
@@ -69,7 +72,7 @@ Write what happened and why.
 3. Access the page in your browser
     <img width="1450" height="85" alt="image" src="https://github.com/user-attachments/assets/37c6eba8-ab49-4ce6-b2f0-c80e9985e2cc" />
     <img width="503" height="187" alt="image" src="https://github.com/user-attachments/assets/27a5ccd5-ef56-49cd-8d0c-f9af9ac45f4a" />
-5. Edit the `index.html` on your host — refresh the browser
+4. Edit the `index.html` on your host — refresh the browser
     <img width="799" height="187" alt="image" src="https://github.com/user-attachments/assets/85478ca2-0229-41ac-bd5e-1f2ef93417fc" />
 
 
@@ -92,9 +95,9 @@ Write in your notes: What is the difference between a named volume and a bind mo
 1. List all Docker networks on your machine
    <img width="756" height="161" alt="image" src="https://github.com/user-attachments/assets/c11be163-a541-4dc5-9f90-7b74221f01cc" />
 
-3. Inspect the default `bridge` network
-4. Run two containers on the default bridge — can they ping each other by **name**?
-5. Run two containers on the default bridge — can they ping each other by **IP**?
+2. Inspect the default `bridge` network
+3. Run two containers on the default bridge — can they ping each other by **name**?
+4. Run two containers on the default bridge — can they ping each other by **IP**?
    <img width="1512" height="735" alt="image" src="https://github.com/user-attachments/assets/80d058a0-819c-4cf3-844f-f90bd71921c5" />
    <img width="1512" height="249" alt="image" src="https://github.com/user-attachments/assets/2049ae56-e8c0-4871-a86f-e6a409a04411" />
 
@@ -113,10 +116,10 @@ Write in your notes: What is the difference between a named volume and a bind mo
 2. Run two containers on `my-app-net`
    <img width="1208" height="363" alt="image" src="https://github.com/user-attachments/assets/809d3e70-6c54-4955-b69a-eb1afd35363b" />
 
-4. Can they ping each other by **name** now?
+3. Can they ping each other by **name** now?
    <img width="1248" height="846" alt="image" src="https://github.com/user-attachments/assets/f2b0567a-668d-473a-9c0e-4251e444578a" />
 
-6. Write in your notes: Why does custom networking allow name-based communication but the default bridge doesn't?
+4. Write in your notes: Why does custom networking allow name-based communication but the default bridge doesn't?
    
     `A user-defined (custom) bridge network has Docker’s built-in DNS service. It automatically resolves a container name to its current IP address.
      The default bridge network does not provide this automatic container-name DNS resolution, so you generally use the container IP.`
@@ -129,7 +132,7 @@ Write in your notes: What is the difference between a named volume and a bind mo
 3. Run an **app container** (use any image) on the same network
    <img width="1248" height="827" alt="image" src="https://github.com/user-attachments/assets/29287c34-bd66-46c7-99e5-12c6c1c621a3" />
 
-5. Verify the app container can reach the database by container name
+4. Verify the app container can reach the database by container name
    <img width="1865" height="802" alt="image" src="https://github.com/user-attachments/assets/b366878b-a730-4549-bb80-475e291fc1a7" />
 
 ---
