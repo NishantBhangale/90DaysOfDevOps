@@ -1,0 +1,11 @@
+FROM bellsoft/liberica-openjdk-alpine-musl AS builder
+WORKDIR /app
+COPY . /app
+RUN javac src/Main.java
+
+FROM bellsoft/liberica-openjre-alpine-musl AS runner
+WORKDIR /app
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+COPY --from=builder --chown=appuser:appgroup /app/src /app/src
+USER appuser
+CMD ["java", "-cp", "src", "Main"]
