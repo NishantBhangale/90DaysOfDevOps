@@ -71,7 +71,11 @@ Write a simple Dockerfile for the web app. The app doesn't need to be complex â€
 3. Write in your notes: Why doesn't simple scaling work with port mapping?
    - Docker scale fails, giving error port is already allocated.
 ---
+### Result
 
+<img width="1848" height="726" alt="image" src="https://github.com/user-attachments/assets/5468d6fe-4a36-4162-9425-1e46a29cbbea" />
+
+---
 ## Hints
 - Build from Dockerfile: `build: ./app`
 - Healthcheck: `healthcheck:` with `test`, `interval`, `timeout`
