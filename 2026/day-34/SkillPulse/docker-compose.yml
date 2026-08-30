@@ -1,0 +1,62 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: db
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - 3306:3306
+    volumes:
+      - skillpulse_mysql:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: always
+    networks:
+      - skillpulse
+  
+  backend:
+    build: ./backend
+    container_name: skillpulse-backend
+    ports:
+      - 8080:8080
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - skillpulse
+  
+  nginx:
+    image: nginx:alpine
+    container_name: skillpulse-frontend
+    ports:
+      - 8087:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./frontend:/usr/share/nginx/html:ro
+    depends_on:
+      - backend
+    networks:
+      - skillpulse
+  
+volumes:
+  skillpulse_mysql:
+    name: skillpulse_mysql
+
+networks:
+  skillpulse:
+    name: skillpulse
+    # If the external check fails, Compose falls back to creating it
+    driver: bridge
+    
