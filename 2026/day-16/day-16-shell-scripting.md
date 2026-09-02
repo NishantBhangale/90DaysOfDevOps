@@ -33,7 +33,7 @@ chmod +x hello.sh
 ```
 
 **Document:** What happens if you remove the shebang line?
-Without a shebang, `./script.sh` is executed by the current/default shell (which may not be Bash), so Bash-specific syntax can break. Running it explicitly as `bash script.sh` still works fine, since the interpreter is specified directly on the command line.
+   Without a shebang, `./script.sh` is executed by the current/default shell (which may not be Bash), so Bash-specific syntax can break. Running it explicitly as `bash script.sh` still       works fine, since the interpreter is specified directly on the command line.
 ---
 
 ### Task 2: Variables
