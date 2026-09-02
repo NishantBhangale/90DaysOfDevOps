@@ -33,7 +33,7 @@ chmod +x hello.sh
 ```
 
 **Document:** What happens if you remove the shebang line?
-
+Without a shebang, `./script.sh` is executed by the current/default shell (which may not be Bash), so Bash-specific syntax can break. Running it explicitly as `bash script.sh` still works fine, since the interpreter is specified directly on the command line.
 ---
 
 ### Task 2: Variables
@@ -41,8 +41,25 @@ chmod +x hello.sh
    - A variable for your `NAME`
    - A variable for your `ROLE` (e.g., "DevOps Engineer")
    - Print: `Hello, I am <NAME> and I am a <ROLE>`
-2. Try using single quotes vs double quotes — what's the difference?
 
+     <img width="584" height="132" alt="image" src="https://github.com/user-attachments/assets/de10158d-17f7-4d85-afb8-0d256fe10167" />
+
+2. Try using single quotes vs double quotes — what's the difference?
+## Single quotes vs double quotes in Bash
+
+- **Single quotes (`'...'`)** — everything inside is treated as a literal string. Variables and special characters are **not** expanded. `'$NAME'` would print the literal text `$NAME`, not its value.
+- **Double quotes (`"..."`)** — allow **variable expansion** (`$NAME`) and command substitution (`` `cmd` `` or `$(cmd)`), while still protecting spaces and most special characters from the shell.
+
+In the example script:
+```bash
+NAME='Nishant'
+ROLE="Devops Engineer"
+echo "Hello, I am $NAME and I am a $ROLE"
+```
+- `NAME` and `ROLE` are just assigned literal strings here — quoting style doesn't matter for assignment itself (both single and double quotes work the same way for plain text with no `$` or spaces to expand).
+- The difference shows up in the `echo` line: because it uses **double quotes**, `$NAME` and `$ROLE` are expanded to their values, producing:
+- If the `echo` line used single quotes instead (`echo '...$NAME...'`), it would print `$NAME` literally instead of `Nishant`.
+   
 ---
 
 ### Task 3: User Input with read
@@ -50,6 +67,8 @@ chmod +x hello.sh
    - Asks the user for their name using `read`
    - Asks for their favourite tool
    - Prints: `Hello <name>, your favourite tool is <tool>`
+<img width="335" height="98" alt="image" src="https://github.com/user-attachments/assets/14432520-ebcb-48a1-9dc1-3989c6ddbbd4" />
+<img width="584" height="64" alt="image" src="https://github.com/user-attachments/assets/a91b9b05-c47c-4fa0-8ce3-455b5c2e67c3" />
 
 ---
 
@@ -58,10 +77,34 @@ chmod +x hello.sh
    - Takes a number using `read`
    - Prints whether it is **positive**, **negative**, or **zero**
 
+   `#!/bin/bash
+   read -p "Enter number to check" number
+   
+   if [[ $number -gt 0 ]]; then
+   	echo "number is positive"
+   elif [[ $number -eq 0 ]]; then
+   	echo "number is zero"
+   else
+   	echo "number is negative"
+   fi`
+
 2. Create `file_check.sh` that:
    - Asks for a filename
    - Checks if the file **exists** using `-f`
    - Prints appropriate message
+
+`#!/bin/bash
+
+echo "Current directory is $(pwd)"
+read -p "Enter the file you want to search: " file
+
+if [ -f $file ]; then
+    echo "file found"
+else
+    echo "no result found"
+fi`
+
+<img width="587" height="116" alt="image" src="https://github.com/user-attachments/assets/7b368b11-939b-498f-a56d-3ad0535be307" />
 
 ---
 
@@ -71,6 +114,21 @@ Create `server_check.sh` that:
 2. Asks the user: "Do you want to check the status? (y/n)"
 3. If `y` — runs `systemctl status <service>` and prints whether it's **active** or **not**
 4. If `n` — prints "Skipped."
+   
+`service1=sshd
+service2=nginx
+
+echo "the services available on system are $service1 and $service2"
+
+read -p "Do you want to check the status? (y/n) " choice
+
+if [[ "$choice" == 'y' ]]; then
+    echo "$service1 is $(systemctl is-active $service1)"
+elif [[ "$choice" == 'n' ]]; then
+    echo "Skipped"
+else
+    echo "Invalid input, please enter y or n"
+fi`
 
 ---
 
