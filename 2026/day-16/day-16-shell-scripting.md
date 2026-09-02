@@ -77,7 +77,8 @@ echo "Hello, I am $NAME and I am a $ROLE"
    - Takes a number using `read`
    - Prints whether it is **positive**, **negative**, or **zero**
 
-   `#!/bin/bash
+   `````````      
+   #!/bin/bash
    read -p "Enter number to check" number
    
    if [[ $number -gt 0 ]]; then
@@ -86,14 +87,16 @@ echo "Hello, I am $NAME and I am a $ROLE"
    	echo "number is zero"
    else
    	echo "number is negative"
-   fi`
+   fi
+   ````````
 
-2. Create `file_check.sh` that:
+3. Create `file_check.sh` that:
    - Asks for a filename
    - Checks if the file **exists** using `-f`
    - Prints appropriate message
 
-`#!/bin/bash
+```````
+#!/bin/bash
 
 echo "Current directory is $(pwd)"
 read -p "Enter the file you want to search: " file
@@ -103,7 +106,7 @@ if [ -f $file ]; then
 else
     echo "no result found"
 fi`
-
+```````
 <img width="587" height="116" alt="image" src="https://github.com/user-attachments/assets/7b368b11-939b-498f-a56d-3ad0535be307" />
 
 ---
@@ -115,7 +118,8 @@ Create `server_check.sh` that:
 3. If `y` — runs `systemctl status <service>` and prints whether it's **active** or **not**
 4. If `n` — prints "Skipped."
    
-`service1=sshd
+`````````
+service1=sshd
 service2=nginx
 
 echo "the services available on system are $service1 and $service2"
@@ -129,7 +133,7 @@ elif [[ "$choice" == 'n' ]]; then
 else
     echo "Invalid input, please enter y or n"
 fi`
-
+`````````
 ---
 
 ## Hints
