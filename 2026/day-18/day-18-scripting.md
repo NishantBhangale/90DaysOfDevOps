@@ -85,9 +85,9 @@ You will:
 4. Try a **piped command** where one part fails — what happens with `set -o pipefail`?
 
 **Document:** What does each flag do?
-- `set -e` →
-- `set -u` →
-- `set -o pipefail` →
+- `set -e` → Exits the script immediately if any command returns a non-zero exit status. Without this, Bash just moves on to the next line even after a command fails, silently continuing with a broken state.
+- `set -u` → Treats references to unset variables as an error and exits, instead of silently substituting an empty string.
+- `set -o pipefail` → By default, a pipeline's exit status is only that of the last command. pipefail makes the whole pipeline fail if any command in it fails - not just the last one.
 
 ---
 
