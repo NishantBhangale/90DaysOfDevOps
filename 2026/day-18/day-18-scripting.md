@@ -44,8 +44,8 @@ You will:
       else
           echo "Usage: $0 <name> <num1> <num2>"
       fi
-    ```
-    <img width="651" height="78" alt="image" src="https://github.com/user-attachments/assets/da0d6dac-d227-44a5-9fbb-75403ceb62ea" />
+    ````
+<img width="657" height="75" alt="image" src="https://github.com/user-attachments/assets/4f96db62-cbfd-4db3-840b-14c07562afac" />
 
 ---
 
