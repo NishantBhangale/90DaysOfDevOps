@@ -96,6 +96,20 @@ You will:
    - A function that uses `local` keyword for variables
    - Show that `local` variables don't leak outside the function
    - Compare with a function that uses regular variables
+  
+     ```
+     #!/bin/bash
+      set -euo pipefail
+      
+      function_var(){
+          local name="Nishant"
+          echo "name inside function is: $name"
+      }
+      function_var
+      name=
+      echo "name in global scope is: $name"
+      ```
+      <img width="587" height="46" alt="image" src="https://github.com/user-attachments/assets/d1206a24-b16f-4922-9184-7e9dc9da11c1" />
 
 ---
 
@@ -110,6 +124,54 @@ Create `system_info.sh` that uses functions for everything:
 7. Use `set -euo pipefail` at the top
 
 Output should look clean and readable.
+
+```
+      #!/bin/bash
+      set -euo pipefail
+      
+      function_osinfo() {
+          echo "SYSTEM & OS INFORMATION"
+          echo -e "Hostname : $(hostname)"
+          echo -e "OS Info  : $(uname -a)"
+      }
+      
+      function_systemuptime() {
+          echo "SYSTEM UPTIME"
+          echo -e "Uptime   : $(uptime -p)"
+      }
+      
+      function_diskusage() {
+          echo "TOP 5 LARGEST FILES/DIRECTORIES (Root)"
+          echo -e "Scanning... (this may take a moment)\n"
+          # Note: Sorting root disk usage can take a few seconds
+          du -ah / 2>/dev/null | sort -rh | head -n 5
+      }
+      
+      function_checkCPUconsum() {
+          echo "TOP 5 CPU-CONSUMING PROCESSES"
+          # Using --sort=-%cpu to show highest consumers first
+          ps aux --sort=-%cpu | head -n 6
+      }
+      
+      main() {
+          echo -e "Running system diagnostic check..."
+          function_osinfo
+          function_systemuptime
+          function_diskusage
+          function_checkCPUconsum
+      }
+      
+      # --- Execution ---
+      read -p "Do you want to check the system (y/n)? " ch
+      
+      # Safe comparison handles empty inputs without throwing errors
+      if [[ "${ch}" == "y" ]]; then
+          main
+      else
+          echo "Skipped."
+      fi
+```
+   <img width="810" height="226" alt="image" src="https://github.com/user-attachments/assets/07870371-b567-4773-877f-ca7fabb97ef1" />
 
 ---
 
