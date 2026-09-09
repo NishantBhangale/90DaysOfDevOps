@@ -24,7 +24,7 @@ function_createbackup(){
     echo "size of compressed file is $(du -h "$backup_dir/${timestamp}.tar.gz")"
 }
 function_cleanup(){
-    mapfile -t arr < <(find "$backup_dir" -maxdepth 1 -type f -mtime -1 2>/dev/null | head -n 5)
+    mapfile -t arr < <(find "$backup_dir" -maxdepth 1 -type f -mtime -1 2>/dev/null | head -n 5) #change -mtime to required day currently its picking 1 day prior created backups
     printf '%s\n' "${arr[@]}"
     echo "Cleaning ##########"
     for i in "${arr[@]}"; do
