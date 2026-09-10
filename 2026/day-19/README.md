@@ -56,6 +56,8 @@ Create `backup.sh` that:
    - Run `backup.sh` every Sunday at 3 AM
    - Run a health check script every 5 minutes
 
+   log_rotate : - 
+   
 ---
 
 ### Task 4: Combine — Scheduled Maintenance Script
