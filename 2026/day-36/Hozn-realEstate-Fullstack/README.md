@@ -1,6 +1,8 @@
 # Hozn - Real Estate 🏡🚀
 
 Forked from https://github.com/AHMAD-JX/Hozn-RealEstate-Fullstack
+updated repo - 
+https://github.com/NishantBhangale/Hozn-RealEstate-Fullstack/tree/main
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AHMAD-JX/Hozn-RealEstate-Fullstack?style=for-the-badge)
 ![GitHub stars](https://img.shields.io/github/stars/AHMAD-JX/Hozn-RealEstate-Fullstack?style=for-the-badge)
