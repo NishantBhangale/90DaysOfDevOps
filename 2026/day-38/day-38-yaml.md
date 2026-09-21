@@ -34,7 +34,12 @@ Create `server.yaml` that describes a server:
 - `server` with nested keys: `name`, `ip`, `port`
 - `database` with nested keys: `host`, `name`, `credentials` (nested further: `user`, `password`)
 
+  <img width="211" height="234" alt="image" src="https://github.com/user-attachments/assets/a6969101-23e2-48fa-9129-db4e2e9b9145" />
+  <img width="647" height="416" alt="image" src="https://github.com/user-attachments/assets/5f2f3bbc-2ab8-408c-baae-1f82f700125d" />
+
+
 **Verify:** Try adding a tab instead of spaces — what happens when you validate it?
+- In YAML, using a tab character for indentation results in a syntax error because the official YAML specification strictly prohibits tabs for indentation.
 
 ---
 
@@ -43,8 +48,15 @@ In `server.yaml`, add a `startup_script` field using:
 1. The `|` block style (preserves newlines)
 2. The `>` fold style (folds into one line)
 
-Write in your notes: When would you use `|` vs `>`?
+keys should be unique as duplicate not allowed
+<img width="822" height="429" alt="image" src="https://github.com/user-attachments/assets/20ee631e-88f0-4cf5-b048-553bb2321868" />
 
+Corrected
+<img width="656" height="412" alt="image" src="https://github.com/user-attachments/assets/1be6205a-747e-4a41-b1e8-386cbe4e486b" />
+
+Write in your notes: When would you use `|` vs `>`?
+1. Use `| ` block style for Code and Scripts, SQL quesries, Markdown or Templates.
+2. Use `>` folded style for Long Descriptions, Error or Status Messages.
 ---
 
 ### Task 5: Validate Your YAML
@@ -52,7 +64,45 @@ Write in your notes: When would you use `|` vs `>`?
 2. Validate both your YAML files
 3. Intentionally break the indentation — what error do you get?
 4. Fix it and validate again
-
+- done
+  server.yaml
+  ```
+   server: 
+     name: database
+     ip: 172.23.44.4
+     port: 3304
+   
+   database:
+     host: postgres
+     name: secure-postgres
+     credentials:
+       user: admin 
+       password: admin123
+   
+   startup_script: >
+     This is a very long sentence
+     that spans multiple lines in the 
+     YAML file, but will be read as a 
+     single continuous line by the parser.
+   
+   startup_script_1: |
+     def hello_world():
+         print("Hello, YAML!")
+  ```
+  person.yaml
+     ```
+   name: Nishant
+   role: QA engineer
+   experience_years: 5
+   learning: Devops
+   tools:
+     - jenkins
+     - docker
+     - ansible
+     - Terraform
+     - Helm
+   hobbies: [reading, playing, dancing]
+     ```
 ---
 
 ### Task 6: Spot the Difference
@@ -73,3 +123,4 @@ tools:
 - docker
   - kubernetes
 ```
+- Block 2 fails because of inconsistent indentation and a stray tab character, which violate YAML's strict whitespace rules for lists. Specifically, `- docker` is not properly indented underneath the `tools:` key, while `- kubernetes` uses mismatched spacing, causing the parser to throw a syntax error instead of recognizing them as a unified list.
