@@ -39,17 +39,38 @@ Push it. Go to the **Actions** tab on GitHub and watch it run.
 
 **Verify:** Is it green? Click into the job and read every step.
 
+```
+name: hello-workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Print Hello
+        run: echo "Hello from GitHub Actions!"
+```
+<img width="1094" height="564" alt="image" src="https://github.com/user-attachments/assets/537a2ef1-0c22-4d14-aa05-83793a3f3e81" />
+<img width="1094" height="671" alt="image" src="https://github.com/user-attachments/assets/a6edce30-831b-4289-b3bd-3b16f5c9de05" />
+
 ---
 
 ### Task 3: Understand the Anatomy
-Look at your workflow file and write in your notes what each key does:
-- `on:`
-- `jobs:`
-- `runs-on:`
-- `steps:`
-- `uses:`
-- `run:`
-- `name:` (on a step)
+
+- `on: When the workflow should run on push, workflow dispatch (manual trigger)` 
+- `jobs: What jobs the workflow will perform`
+- `runs-on: Which machine/OS the job will run on - ubuntu, macos`
+- `steps: List of tasks performed inside a job`
+- `uses: Use an existing GitHub Action`
+- `run: Run a shell command`
+- `name: Gives a readable name to a job or step`
 
 ---
 
@@ -62,14 +83,57 @@ Update `hello.yml` to also:
 
 Push again — watch the new run.
 
+```
+name: hello-workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Print Hello
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Print Date
+        run: echo "Current date and time is $(date +'%Y-%m-%d %H:%M')"
+
+      - name: Print Triggering Branch
+        run: |
+          echo "This workflow was triggered by the branch: ${{ github.ref_name }}"
+
+      - name: List files in the repository
+        run: |
+          echo "=== Simple file list === $(ls -la)"
+
+      - name: Print runner's operating system
+        run: |
+          echo "=== Runner's operating system === ${{ runner.os }}"
+```
+<img width="955" height="1006" alt="image" src="https://github.com/user-attachments/assets/ceda6711-1bc2-4799-86c5-07d182e47f65" />
+
 ---
 
 ### Task 5: Break It On Purpose
 1. Add a step that runs a command that will **fail** (e.g., `exit 1` or a misspelled command)
 2. Push and observe what happens in the Actions tab
 3. Fix it and push again
+   <img width="1305" height="820" alt="image" src="https://github.com/user-attachments/assets/c7a5ffee-f155-4058-8301-2d8811c3e467" />
+
+   <img width="1305" height="820" alt="image" src="https://github.com/user-attachments/assets/e4726c9d-0089-4308-88d8-678913feb08f" />
+
 
 Write in your notes: What does a failed pipeline look like? How do you read the error?
+
+<img width="1305" height="757" alt="image" src="https://github.com/user-attachments/assets/a7d48501-8406-491f-941a-9f7c146334bb" />
+
+Error can be visible on Dashboard page of workflow run status also for detail infomation, if we click workflow's job, it will give where exactly the workflow got failed.
 
 ---
 
